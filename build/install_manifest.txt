@@ -1,0 +1,2 @@
+/home/martin/gits/tinylang/lib/libtinylangBasic.a
+/home/martin/gits/tinylang/bin/tinylang

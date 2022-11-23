@@ -1,0 +1,8 @@
+# ninja log v5
+0	237	1662242966725828017	lib/Basic/CMakeFiles/tinylangBasic.dir/Version.cpp.o	220831c1a6cb6897
+238	296	1662242966789828242	lib/Basic/libtinylangBasic.a	81ca72c4eda23ca3
+32	1628	1667733224201778745	lib/Basic/CMakeFiles/tinylangBasic.dir/Version.cpp.o	24a9420ff33aa54
+1628	1712	1667733224305779852	lib/Basic/libtinylangBasic.a	81ca72c4eda23ca3
+33	2670	1667733225253789927	tools/driver/CMakeFiles/tinylang.dir/Driver.cpp.o	214d05c6a9a438dc
+2670	2881	1667733225469792213	tools/driver/tinylang	cee02776398a6d6c
+1	16	0	CMakeFiles/install.util	57e88c9b6dba3a00

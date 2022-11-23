@@ -1,0 +1,154 @@
+[1/2] Building CXX object tools/driver/CMakeFiles/tinylang.dir/Driver.cpp.o
+FAILED: tools/driver/CMakeFiles/tinylang.dir/Driver.cpp.o 
+/usr/bin/c++ -DGTEST_HAS_RTTI=0 -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/home/martin/gits/tinylang/include -I/home/martin/gits/tinylang/build/include -fPIC -fno-semantic-interposition -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default -Wno-noexcept-type -Wnon-virtual-dtor -Wdelete-non-virtual-dtor -Wsuggest-override -Wno-comment -Wstring-conversion -Wmisleading-indentation -Wctad-maybe-unsupported -fdiagnostics-color -ffunction-sections -fdata-sections -O3 -DNDEBUG  -fno-exceptions -fno-rtti -UNDEBUG -MD -MT tools/driver/CMakeFiles/tinylang.dir/Driver.cpp.o -MF tools/driver/CMakeFiles/tinylang.dir/Driver.cpp.o.d -o tools/driver/CMakeFiles/tinylang.dir/Driver.cpp.o -c /home/martin/gits/tinylang/tools/driver/Driver.cpp
+In file included from /home/martin/gits/tinylang/tools/driver/Driver.cpp:1:
+In file included from /usr/local/include/llvm/Support/InitLLVM.h:12:
+/usr/local/include/llvm/ADT/Optional.h:83:43: error: no type named 'in_place_t' in namespace 'std'
+  constexpr explicit OptionalStorage(std::in_place_t, Args &&...args)
+                                     ~~~~~^
+/usr/local/include/llvm/ADT/Optional.h:198:43: error: no type named 'in_place_t' in namespace 'std'
+  constexpr explicit OptionalStorage(std::in_place_t, Args &&...args)
+                                     ~~~~~^
+/usr/local/include/llvm/ADT/Optional.h:284:27: error: no type named 'in_place_t' in namespace 'std'
+  constexpr Optional(std::in_place_t, ArgTypes &&...Args)
+                     ~~~~~^
+/usr/local/include/llvm/ADT/Optional.h:277:49: error: no member named 'in_place' in namespace 'std'; did you mean 'replace'?
+  constexpr Optional(const T &y) : Storage(std::in_place, y) {}
+                                           ~~~~~^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_algo.h:4356:5: note: 'replace' declared here
+    replace(_ForwardIterator __first, _ForwardIterator __last,
+    ^
+In file included from /home/martin/gits/tinylang/tools/driver/Driver.cpp:1:
+In file included from /usr/local/include/llvm/Support/InitLLVM.h:12:
+/usr/local/include/llvm/ADT/Optional.h:280:44: error: no member named 'in_place' in namespace 'std'; did you mean 'replace'?
+  constexpr Optional(T &&y) : Storage(std::in_place, std::move(y)) {}
+                                      ~~~~~^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_algo.h:4356:5: note: 'replace' declared here
+    replace(_ForwardIterator __first, _ForwardIterator __last,
+    ^
+In file included from /home/martin/gits/tinylang/tools/driver/Driver.cpp:1:
+In file included from /usr/local/include/llvm/Support/InitLLVM.h:12:
+/usr/local/include/llvm/ADT/Optional.h:285:22: error: no member named 'in_place' in namespace 'std'; did you mean 'replace'?
+      : Storage(std::in_place, std::forward<ArgTypes>(Args)...) {}
+                ~~~~~^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_algo.h:4356:5: note: 'replace' declared here
+    replace(_ForwardIterator __first, _ForwardIterator __last,
+    ^
+In file included from /home/martin/gits/tinylang/tools/driver/Driver.cpp:1:
+In file included from /usr/local/include/llvm/Support/InitLLVM.h:13:
+/usr/local/include/llvm/ADT/SmallVector.h:338:5: error: no member named 'uninitialized_move' in namespace 'std'; did you mean simply 'uninitialized_move'?
+    std::uninitialized_move(I, E, Dest);
+    ^~~~~
+/usr/local/include/llvm/ADT/SmallVector.h:337:15: note: 'uninitialized_move' declared here
+  static void uninitialized_move(It1 I, It1 E, It2 Dest) {
+              ^
+In file included from /home/martin/gits/tinylang/tools/driver/Driver.cpp:1:
+In file included from /usr/local/include/llvm/Support/InitLLVM.h:14:
+In file included from /usr/local/include/llvm/Support/Allocator.h:22:
+In file included from /usr/local/include/llvm/Support/Alignment.h:25:
+In file included from /usr/local/include/llvm/Support/MathExtras.h:16:
+/usr/local/include/llvm/ADT/bit.h:37:56: error: no template named 'is_unsigned_v' in namespace 'std'; did you mean 'is_unsigned'?
+template <typename T, typename = std::enable_if_t<std::is_unsigned_v<T>>>
+                                                  ~~~~~^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/type_traits:801:12: note: 'is_unsigned' declared here
+    struct is_unsigned
+           ^
+In file included from /home/martin/gits/tinylang/tools/driver/Driver.cpp:1:
+In file included from /usr/local/include/llvm/Support/InitLLVM.h:14:
+In file included from /usr/local/include/llvm/Support/Allocator.h:22:
+In file included from /usr/local/include/llvm/Support/Alignment.h:25:
+In file included from /usr/local/include/llvm/Support/MathExtras.h:16:
+/usr/local/include/llvm/ADT/bit.h:37:51: error: template argument for non-type template parameter must be an expression
+template <typename T, typename = std::enable_if_t<std::is_unsigned_v<T>>>
+                                                  ^~~~~~~~~~~~~~~~~~~~~
+/usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/type_traits:2584:17: note: template parameter is declared here
+  template<bool _Cond, typename _Tp = void>
+                ^
+In file included from /home/martin/gits/tinylang/tools/driver/Driver.cpp:1:
+In file included from /usr/local/include/llvm/Support/InitLLVM.h:14:
+In file included from /usr/local/include/llvm/Support/Allocator.h:22:
+In file included from /usr/local/include/llvm/Support/Alignment.h:25:
+In file included from /usr/local/include/llvm/Support/MathExtras.h:16:
+/usr/local/include/llvm/ADT/bit.h:76:56: error: no template named 'is_unsigned_v' in namespace 'std'; did you mean 'is_unsigned'?
+template <typename T, typename = std::enable_if_t<std::is_unsigned_v<T>>>
+                                                  ~~~~~^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/type_traits:801:12: note: 'is_unsigned' declared here
+    struct is_unsigned
+           ^
+In file included from /home/martin/gits/tinylang/tools/driver/Driver.cpp:1:
+In file included from /usr/local/include/llvm/Support/InitLLVM.h:14:
+In file included from /usr/local/include/llvm/Support/Allocator.h:22:
+In file included from /usr/local/include/llvm/Support/Alignment.h:25:
+In file included from /usr/local/include/llvm/Support/MathExtras.h:16:
+/usr/local/include/llvm/ADT/bit.h:76:51: error: template argument for non-type template parameter must be an expression
+template <typename T, typename = std::enable_if_t<std::is_unsigned_v<T>>>
+                                                  ^~~~~~~~~~~~~~~~~~~~~
+/usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/type_traits:2584:17: note: template parameter is declared here
+  template<bool _Cond, typename _Tp = void>
+                ^
+In file included from /home/martin/gits/tinylang/tools/driver/Driver.cpp:1:
+In file included from /usr/local/include/llvm/Support/InitLLVM.h:14:
+In file included from /usr/local/include/llvm/Support/Allocator.h:22:
+In file included from /usr/local/include/llvm/Support/Alignment.h:25:
+/usr/local/include/llvm/Support/MathExtras.h:154:22: error: no template named 'is_unsigned_v' in namespace 'std'; did you mean 'is_unsigned'?
+  static_assert(std::is_unsigned_v<T>,
+                ~~~~~^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/type_traits:801:12: note: 'is_unsigned' declared here
+    struct is_unsigned
+           ^
+In file included from /home/martin/gits/tinylang/tools/driver/Driver.cpp:1:
+In file included from /usr/local/include/llvm/Support/InitLLVM.h:14:
+In file included from /usr/local/include/llvm/Support/Allocator.h:22:
+In file included from /usr/local/include/llvm/Support/Alignment.h:25:
+/usr/local/include/llvm/Support/MathExtras.h:154:38: error: expected '(' for function-style cast or type construction
+  static_assert(std::is_unsigned_v<T>,
+                ~~~~~~~~~~~~~~~~~~~~~^
+/usr/local/include/llvm/Support/MathExtras.h:222:22: error: no template named 'is_unsigned_v' in namespace 'std'; did you mean 'is_unsigned'?
+  static_assert(std::is_unsigned_v<T>,
+                ~~~~~^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/type_traits:801:12: note: 'is_unsigned' declared here
+    struct is_unsigned
+           ^
+In file included from /home/martin/gits/tinylang/tools/driver/Driver.cpp:1:
+In file included from /usr/local/include/llvm/Support/InitLLVM.h:14:
+In file included from /usr/local/include/llvm/Support/Allocator.h:22:
+In file included from /usr/local/include/llvm/Support/Alignment.h:25:
+/usr/local/include/llvm/Support/MathExtras.h:222:38: error: expected '(' for function-style cast or type construction
+  static_assert(std::is_unsigned_v<T>,
+                ~~~~~~~~~~~~~~~~~~~~~^
+/usr/local/include/llvm/Support/MathExtras.h:487:10: error: no matching function for call to 'has_single_bit'
+  return llvm::has_single_bit(Value);
+         ^~~~~~~~~~~~~~~~~~~~
+/usr/local/include/llvm/ADT/bit.h:38:23: note: candidate template ignored: couldn't infer template argument ''
+constexpr inline bool has_single_bit(T Value) noexcept {
+                      ^
+In file included from /home/martin/gits/tinylang/tools/driver/Driver.cpp:1:
+In file included from /usr/local/include/llvm/Support/InitLLVM.h:14:
+In file included from /usr/local/include/llvm/Support/Allocator.h:22:
+In file included from /usr/local/include/llvm/Support/Alignment.h:25:
+/usr/local/include/llvm/Support/MathExtras.h:492:10: error: no matching function for call to 'has_single_bit'
+  return llvm::has_single_bit(Value);
+         ^~~~~~~~~~~~~~~~~~~~
+/usr/local/include/llvm/ADT/bit.h:38:23: note: candidate template ignored: couldn't infer template argument ''
+constexpr inline bool has_single_bit(T Value) noexcept {
+                      ^
+In file included from /home/martin/gits/tinylang/tools/driver/Driver.cpp:1:
+In file included from /usr/local/include/llvm/Support/InitLLVM.h:14:
+In file included from /usr/local/include/llvm/Support/Allocator.h:22:
+In file included from /usr/local/include/llvm/Support/Alignment.h:25:
+/usr/local/include/llvm/Support/MathExtras.h:505:22: error: no template named 'is_unsigned_v' in namespace 'std'; did you mean 'is_unsigned'?
+  static_assert(std::is_unsigned_v<T>,
+                ~~~~~^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/type_traits:801:12: note: 'is_unsigned' declared here
+    struct is_unsigned
+           ^
+In file included from /home/martin/gits/tinylang/tools/driver/Driver.cpp:1:
+In file included from /usr/local/include/llvm/Support/InitLLVM.h:14:
+In file included from /usr/local/include/llvm/Support/Allocator.h:22:
+In file included from /usr/local/include/llvm/Support/Alignment.h:25:
+/usr/local/include/llvm/Support/MathExtras.h:505:38: error: expected '(' for function-style cast or type construction
+  static_assert(std::is_unsigned_v<T>,
+                ~~~~~~~~~~~~~~~~~~~~~^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+ninja: build stopped: subcommand failed.
